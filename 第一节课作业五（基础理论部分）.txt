@@ -1,0 +1,40 @@
+基础理论部分
+0. Can you come up out 3 sceneraies which use AI methods?
+Ans:  scenario 1 - Chatbot to automatically interact the queries; scenario 2 - Alpha Go played chess in 2016; scenario 3 - Self-driving car.
+
+1. How do we use Github; Why do we use Jupyter and Pycharm;
+Ans: Github is used to submit the open coding, communicate with each other in social. Jupyter is good to present and refresh the coding result. Pycharm is convenience in coding.
+
+2. What's the Probability Model?
+Ans: Instead of trying to find the pattern, probability model is to use statistical method to measure the probability:
+
+P(H with x) = P(x) * P(H | x)
+P(x with H) = P(H) * P(x | H)
+Because: P( H with x) = P(x with H)
+Then: P(x) * P (H |x) = P(H) * P(x | H)
+Then: P(H | x) = P (x | H) * P (H) / P(x)
+
+3. Can you came up with some sceneraies at which we could use Probability Model?
+Ans: To predict the weather; to gamble
+
+
+4. Why do we use probability and what's the difficult points for programming based on parsing and pattern match?
+Ans: Parsing & pattern match are both asking thousands of hundreds of rules setting. In this case, enumeration of rules are required to be prepared and inputted at the beginning. While using probability model, rules are not important... as the calculation is to measure the appearance of words and grams.
+
+5. What's the Language Model;
+Ans: It's used to estimate the probability of a sentence. such as:  P(sentence) = P(word_1, word_2,...word_k) = p(word_1)p(word_2 | word_1)...P(word_k | word_1, word_2, word_3,... word_k-1)
+
+6. Can you came up with some sceneraies at which we could use Language Model?
+Ans: Chatbot; conversational AI
+
+7. What's the 1-gram language model;
+Ans: While genetatethe tokens by cut the sentence & word, a probability of sentence is as below:
+P(sentence) = P(word_1, word_2,...word_k) = p(word_1)p(word_2 | word_1)...P(word_k | word_1, word_2, word_3,... word_k-1)
+The calculation is equal to count the frequency of words.
+
+8. What's the disadvantages and advantages of 1-gram language model;
+Ans: Disavantages are 1) Some words has non-sense but it could be counted with high frequency, but the result is not what we want; 2) 1-gram may sacrifice the critical meaning of words.
+Advantages are: 1) Easy in probability calculation; 2) Simple model in measurement. 
+
+9. What't the 2-gram models;
+Ans: It change the tokens to join the 2 words together to do the probability calculation. Formula is same as 1-gram; but the calculation is required to treat the 1-gram counting results.
